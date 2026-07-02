@@ -1,0 +1,34 @@
+# Active sessions template
+
+gm:
+  name: 公司总管
+  status: ready
+  headquarters_version: TEMPLATE v1.0.0
+  current_rule: 本地真源优先；入口句只恢复上下文；新任务先定型；项目经理只做文字、页纲、图内文字、提示词、派单包和验收点；最终图片必须生图模型直出；PPT Factory 只装配确认后的整页图。
+
+project_managers:
+  - project: PROJECT-0001-example
+    alias: 示例项目
+    status: template
+    write_scope: companies/MKT-marketing-consulting/projects/PROJECT-0001-example/
+    next_entry: 进入项目 示例项目
+    forbidden_outputs:
+      - image-generation
+      - pptx-export
+      - pdf-export
+      - html-screenshot
+      - customer-ready-claim
+
+departments:
+  image:
+    name: 生图部门
+    status: ready
+    gate: 最终图片必须由生图模型直接生成完整画面和图内文字；缺输入直接拦截；不用后期叠字替代重生。
+  ppt_factory:
+    name: PPT Factory
+    status: ready_when_user_confirms
+    gate: 只装配用户确认过的整页图；不得在整页图上补字。
+  video:
+    name: 视频部门
+    status: reserved
+    gate: 未配置前不自动生产视频。

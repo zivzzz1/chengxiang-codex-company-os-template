@@ -1,0 +1,55 @@
+.DS_Store
+**/.DS_Store
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.crt
+*.cert
+
+# Dependency and build output
+node_modules/
+.cache/
+dist/
+build/
+coverage/
+tmp/
+temp/
+outputs/
+
+# Generated or customer-facing binary assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.heic
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.m4a
+*.pdf
+*.ppt
+*.pptx
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.zip
+*.rar
+*.7z
+
+# User/customer materials should stay local
+**/source/
+**/source-assets/
+**/client-assets/
+**/client-materials/
+**/raw-assets/
+**/internal-samples/

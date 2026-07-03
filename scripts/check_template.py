@@ -12,6 +12,7 @@ REQUIRED_FILES = [
     "docs/INSTALL.md",
     "docs/CONFIGURATION.md",
     "docs/USAGE.md",
+    "docs/LOCKED-CONFIG.md",
     "docs/PRIVACY-AND-SAFETY.md",
     "state/company-version.md",
     "state/current-context.md",
@@ -47,6 +48,10 @@ REQUIRED_SNIPPETS = [
     "PPT Factory",
     "项目经理",
     "任务总览板",
+    "自动线程标题",
+    "CODEX_THREAD_ID",
+    "执行前置声明",
+    "完成审计",
 ]
 
 

@@ -13,7 +13,8 @@
 3. 先读 `AGENTS.md`。
 4. 再把 `prompts/start-general-manager.md` 的内容发给 Codex。
 5. 按 `docs/CONFIGURATION.md` 把公司名、项目名、部门名和状态文件改成你自己的。
-6. 用 `python3 scripts/check_template.py` 做最小检查。
+6. 按 `docs/LOCKED-CONFIG.md` 检查回复格式、自动标题和功能调用边界。
+7. 用 `python3 scripts/check_template.py` 做最小检查。
 
 ## 目录结构
 

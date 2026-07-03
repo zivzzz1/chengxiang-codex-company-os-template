@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = [
     "AGENTS.md",
     "README.md",
+    "install.sh",
     "prompts/start-general-manager.md",
     "docs/INSTALL.md",
     "docs/CONFIGURATION.md",
@@ -18,12 +19,14 @@ REQUIRED_FILES = [
     "state/company-version.md",
     "state/current-context.md",
     "state/current-state.md",
+    "state/capability-trigger-index.md",
     "state/task-board-current.md",
     "tasks/next-task.md",
     "company-runtime/operating-snapshot.md",
     "company-runtime/active-sessions.yml",
     "modules/image-factory/AGENTS.md",
     "modules/ppt-factory/AGENTS.md",
+    "companies/MKT-marketing-consulting/workflows/capability-trigger-visual-audit-v1.md",
     "companies/MKT-marketing-consulting/projects/_template/README.md",
     "scripts/check_skills.py",
     "skills/COMPANION-SKILLS.md",
@@ -60,6 +63,29 @@ REQUIRED_SNIPPETS = [
     "one-image-understanding",
     "image-ppt",
     "structured-ppt",
+    "技能路由锁定",
+    "能力触发预判面板",
+    "curl -fsSL",
+]
+
+REQUIRED_SKILL_FILES = [
+    "ai-company-recording-system",
+    "state-drift-governance",
+    "html-visual-reporting",
+    "one-image-understanding",
+    "image-ppt",
+    "structured-ppt",
+    "chengxiang-html-craft",
+    "chengxiang-mobile-h5",
+    "content-research-writer",
+    "meeting-notes-and-actions",
+    "transcript-learning-summary",
+    "file-organizer",
+    "spreadsheet-formula-helper",
+    "feishu-link-learning-intake",
+    "xiaohongshu-app-topic-research",
+    "ppt-aesthetic-workflow",
+    "studioos-workflow",
 ]
 
 
@@ -76,6 +102,11 @@ def main():
     for rel in REQUIRED_FILES:
         if not (ROOT / rel).is_file():
             errors.append(f"missing required file: {rel}")
+
+    for skill in REQUIRED_SKILL_FILES:
+        rel = f"codex-skills/{skill}/SKILL.md"
+        if not (ROOT / rel).is_file():
+            errors.append(f"missing companion skill: {rel}")
 
     all_text = []
     for path in iter_text_files():

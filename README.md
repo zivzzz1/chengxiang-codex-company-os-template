@@ -8,14 +8,28 @@
 
 ## 你拿到后先做什么
 
+最快方式是在目标电脑终端运行：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/zivzzz1/chengxiang-codex-company-os-template/main/install.sh | bash
+```
+
+脚本会：
+
+1. Clone 或更新本仓库。
+2. 把 `codex-skills/` 里的 Companion Skills 安装到 `~/.codex/skills/`。
+3. 跑 `python3 scripts/check_template.py`。
+4. 跑 `python3 scripts/check_skills.py`。
+5. 打印启动入口。
+
+手动方式：
+
 1. 下载或 clone 本仓库。
-2. 在 Codex 中打开本目录。
-3. 先读 `AGENTS.md`。
-4. 再把 `prompts/start-general-manager.md` 的内容发给 Codex。
-5. 按 `docs/CONFIGURATION.md` 把公司名、项目名、部门名和状态文件改成你自己的。
-6. 按 `docs/SKILL-SETUP.md` 配置目标电脑上的全局 Skill。
-7. 按 `docs/LOCKED-CONFIG.md` 检查回复格式、自动标题和功能调用边界。
-8. 用 `python3 scripts/check_template.py` 和 `python3 scripts/check_skills.py` 做最小检查。
+2. 运行 `bash install.sh`。
+3. 在 Codex 中打开本目录。
+4. 先读 `AGENTS.md`。
+5. 再把 `prompts/start-general-manager.md` 的内容发给 Codex，或直接说 `启动总管`。
+6. 按 `docs/CONFIGURATION.md` 把公司名、项目名、部门名和状态文件改成你自己的。
 
 ## 目录结构
 
@@ -30,7 +44,9 @@
 ├── companies/                        # 公司、部门、项目和工作流
 ├── modules/                          # 生图、PPT、视频等执行部门规则
 ├── skills/                           # 可复用能力说明
+├── codex-skills/                     # 可安装到 ~/.codex/skills 的 Companion Skills
 ├── scripts/                          # 本地检查脚本
+├── install.sh                         # 一键安装 / 更新脚本
 └── tests/                            # 测试说明
 ```
 
@@ -70,6 +86,7 @@ python3 scripts/check_skills.py
 - 是否残留本机绝对路径。
 - 是否残留 Notion / 客户项目 / 敏感输出目录。
 - 图片生产硬规则是否存在。
+- Companion Skills 是否随仓库提供并已安装到当前电脑。
 
 ## 许可证
 

@@ -42,6 +42,7 @@
 ## 发布前检查
 
 ```bash
+bash install.sh
 python3 scripts/check_template.py
 python3 scripts/check_skills.py
 git status --short

@@ -2,7 +2,15 @@
 
 这个模板已经写好了公司规则，但另一台电脑仍然需要安装或启用对应的 Codex Skill / 插件能力。
 
-## 先跑检查
+## 一键安装
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/zivzzz1/chengxiang-codex-company-os-template/main/install.sh | bash
+```
+
+它会把 `codex-skills/` 下的公开安全版 Companion Skills 安装到 `~/.codex/skills/`。
+
+## 再跑检查
 
 ```bash
 python3 scripts/check_skills.py
@@ -15,7 +23,7 @@ python3 scripts/check_skills.py
 
 ## 必装 Companion Skills
 
-这些是从当前系统迁移出来的高频能力。目标电脑如果要完整复现，应优先安装：
+这些是从当前系统迁移出来的高频能力。一键安装脚本会安装这些 Skill 的公开安全版：
 
 - `ai-company-recording-system`
 - `state-drift-governance`
@@ -67,7 +75,8 @@ python3 scripts/check_skills.py
 
 1. Clone 仓库。
 2. 打开 Codex 工作区。
-3. 跑 `python3 scripts/check_template.py`。
-4. 跑 `python3 scripts/check_skills.py`。
-5. 补齐缺失 Skill 或确认降级使用。
-6. 再说 `启动总管`。
+3. 跑 `bash install.sh`。
+4. 跑 `python3 scripts/check_template.py`。
+5. 跑 `python3 scripts/check_skills.py`。
+6. 补齐缺失插件 / 连接器或确认降级使用。
+7. 再说 `启动总管`。

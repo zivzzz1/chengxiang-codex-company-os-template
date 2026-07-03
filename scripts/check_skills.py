@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 from pathlib import Path
 
 REQUIRED_SKILLS = [
@@ -26,16 +27,18 @@ OPTIONAL_SKILLS = [
 
 
 def skill_installed(home: Path, name: str) -> bool:
-    return (home / ".codex" / "skills" / name / "SKILL.md").is_file()
+    root = Path(os.environ.get("SKILL_ROOT", home / ".codex" / "skills"))
+    return (root / name / "SKILL.md").is_file()
 
 
 def main() -> int:
     home = Path.home()
+    skill_root = Path(os.environ.get("SKILL_ROOT", home / ".codex" / "skills"))
     missing_required = []
     missing_optional = []
 
     print("Companion Skills check")
-    print(f"Skill root: {home / '.codex' / 'skills'}")
+    print(f"Skill root: {skill_root}")
     print()
 
     print("Required:")

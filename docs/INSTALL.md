@@ -1,19 +1,40 @@
 # 安装说明
 
-## 1. 下载模板
+## 1. 一键安装
+
+在目标电脑终端运行：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/zivzzz1/chengxiang-codex-company-os-template/main/install.sh | bash
+```
+
+脚本会把仓库下载到：
+
+```text
+~/chengxiang-codex-company-os-template
+```
+
+并把公开安全版 Companion Skills 安装到：
+
+```text
+~/.codex/skills
+```
+
+## 2. 手动下载模板
 
 ```bash
 git clone <your-template-repo-url>
 cd chengxiang-codex-company-os-template
+bash install.sh
 ```
 
 如果你下载的是 zip，解压后进入目录即可。
 
-## 2. 用 Codex 打开目录
+## 3. 用 Codex 打开目录
 
 在 Codex 中选择这个工作区目录，或在终端进入目录后启动 Codex。
 
-## 3. 第一次启动
+## 4. 第一次启动
 
 把下面这句话发给 Codex：
 
@@ -23,7 +44,7 @@ cd chengxiang-codex-company-os-template
 
 或把 `prompts/start-general-manager.md` 的内容发给 Codex。
 
-## 4. 做本地检查
+## 5. 做本地检查
 
 ```bash
 python3 scripts/check_template.py
@@ -34,7 +55,7 @@ python3 scripts/check_skills.py
 
 如果 `check_skills.py` 报缺失，先按 `docs/SKILL-SETUP.md` 配置技能，再开始正式使用。
 
-## 5. 推荐配置顺序
+## 6. 推荐配置顺序
 
 1. 改 `state/company-version.md`。
 2. 改 `state/current-context.md`。

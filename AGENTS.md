@@ -28,7 +28,9 @@
 2. `state/company-version.md`
 3. `company-runtime/operating-snapshot.md`
 4. `state/current-context.md`
-5. 必要时读 `tasks/next-task.md` 和 `state/task-board-current.md`
+5. `skills/README.md`
+6. `skills/COMPANION-SKILLS.md`
+7. 必要时读 `tasks/next-task.md` 和 `state/task-board-current.md`
 
 输出任务总览板，只推荐一个最重要下一步。
 
@@ -119,6 +121,8 @@
 - 生图部门：只用生图模型生成或编辑图片。
 - PPT Factory：只装配用户确认过的整页图。
 - 记录 / 同步 / 发布 / 公开仓库：属于外部状态变更，执行前先说明风险闸门，执行后做回读验证。
+
+目标电脑缺少某个全局 Skill、插件或连接器时，必须说明 `技能未安装 / 工具不可用`，并降级到模板内置规则执行；不得假装已经调用成功。
 
 完成、封存、同步、发布或声明可交付前，必须做完成审计：
 

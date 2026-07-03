@@ -13,6 +13,7 @@ REQUIRED_FILES = [
     "docs/CONFIGURATION.md",
     "docs/USAGE.md",
     "docs/LOCKED-CONFIG.md",
+    "docs/SKILL-SETUP.md",
     "docs/PRIVACY-AND-SAFETY.md",
     "state/company-version.md",
     "state/current-context.md",
@@ -24,6 +25,8 @@ REQUIRED_FILES = [
     "modules/image-factory/AGENTS.md",
     "modules/ppt-factory/AGENTS.md",
     "companies/MKT-marketing-consulting/projects/_template/README.md",
+    "scripts/check_skills.py",
+    "skills/COMPANION-SKILLS.md",
 ]
 
 FORBIDDEN_SNIPPETS = [
@@ -52,6 +55,11 @@ REQUIRED_SNIPPETS = [
     "CODEX_THREAD_ID",
     "执行前置声明",
     "完成审计",
+    "Companion Skills",
+    "check_skills.py",
+    "one-image-understanding",
+    "image-ppt",
+    "structured-ppt",
 ]
 
 

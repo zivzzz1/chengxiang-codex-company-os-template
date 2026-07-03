@@ -9,6 +9,7 @@
 | `company-runtime/operating-snapshot.md` | 当前运行方式、项目快照、部门状态 |
 | `tasks/next-task.md` | 当前最重要下一步 |
 | `state/task-board-current.md` | 活跃任务板 |
+| `skills/COMPANION-SKILLS.md` | 目标电脑需要安装或启用的 Skill / 插件能力 |
 | `companies/MKT-marketing-consulting/projects/_template/README.md` | 项目模板字段 |
 
 ## 公司名替换
@@ -57,3 +58,15 @@ cp -R companies/MKT-marketing-consulting/projects/_template companies/MKT-market
 ```text
 启动 PPT Factory 项目名
 ```
+
+## 技能配置
+
+模板内置的是“规则和触发说明”，不是另一台电脑的全局 Skill 安装包。
+
+目标电脑需要额外检查：
+
+```bash
+python3 scripts/check_skills.py
+```
+
+如有缺失，按 `docs/SKILL-SETUP.md` 补装或启用对应能力。缺失技能时，总管必须明说缺失并降级执行，不能假装已经调用。

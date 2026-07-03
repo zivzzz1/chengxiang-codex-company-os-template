@@ -37,10 +37,12 @@
 - 生图部门只做生图模型直出或编辑。
 - PPT Factory 只装配确认后的整页图。
 - 记录、同步、发布、公开仓库等外部状态变更，执行前必须说明风险闸门，执行后必须回读验证。
+- 全局 Skill、插件或连接器必须真实存在才算已调用；缺失时必须明说并降级。
 
 ## 发布前检查
 
 ```bash
 python3 scripts/check_template.py
+python3 scripts/check_skills.py
 git status --short
 ```
